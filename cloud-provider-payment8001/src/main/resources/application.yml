@@ -1,0 +1,17 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    url: jdbc:mysql://101.201.255.155:3306/demo?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1.com:7001/eureka
+  instance:
+    prefer-ip-address: true #访问路径显示ip
