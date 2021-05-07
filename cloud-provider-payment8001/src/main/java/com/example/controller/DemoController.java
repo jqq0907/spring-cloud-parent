@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -20,6 +21,9 @@ public class DemoController {
     @Resource
     private DiscoveryClient discoveryClient;
 
+    @Resource
+    private DemoService demoService;
+
     @RequestMapping("/payment/select")
     public String getDemo() {
         return "我是提供者";
@@ -31,5 +35,15 @@ public class DemoController {
         List<String> services = discoveryClient.getServices();
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
         return instances;
+    }
+
+    /**
+     * openFeign调用
+     *
+     * @return
+     */
+    @RequestMapping("/payment/openfeign/string")
+    public String getString() {
+        return demoService.getString();
     }
 }

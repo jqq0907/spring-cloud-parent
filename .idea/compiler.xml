@@ -8,17 +8,25 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-provider-payment8002" />
+        <module name="cloud-consumer-openfein-order80" />
+        <module name="cloudalibaba-provider-payment9001" />
         <module name="cloud-eureka-server7001" />
-        <module name="cloud-consumer-order80" />
+        <module name="cloud-gateway-gateway9527" />
         <module name="cloud-provider-payment8001" />
+        <module name="cloudalibaba-comsume-nacos-order83" />
+        <module name="cloud-consumer-order80" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloud-consumer-openfein-order80" target="1.7" />
       <module name="cloud-consumer-order80" target="1.7" />
       <module name="cloud-eureka-server7001" target="1.8" />
       <module name="cloud-eureka-server7001 (1)" target="1.8" />
+      <module name="cloud-gateway-gateway9527" target="1.8" />
       <module name="cloud-provider-payment8001" target="1.8" />
       <module name="cloud-provider-payment8002" target="1.8" />
+      <module name="cloudalibaba-comsume-nacos-order83" target="1.8" />
+      <module name="cloudalibaba-provider-payment9001" target="1.8" />
       <module name="spring-cloud-parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
